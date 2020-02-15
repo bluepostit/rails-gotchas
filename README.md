@@ -44,3 +44,16 @@ form = document.querySelector('form');
 Rails.fire(form, 'submit');
 ```
 * See more information [here](https://github.com/rails/rails/issues/29546#issuecomment-313981539).
+
+### Q: I have more than one MapBox map on my page. When I display a map that was previously hidden, it renders as a small square.
+**A:** Once the map has been displayed (eg. when an event is triggered), be sure to call
+```javascript
+map.resize()
+```
+You will need a reference to the Mapbox map object, so that you can call `.resize()` on it.
+
+### Q: How do I track changes to an ActiveRecord model during its update?
+**A:** See [this article](http://ruby-journal.com/how-to-track-changes-with-after-callbacks-in-rails-3-or-newer/)
+
+### Q: I added new elements to the DOM after the page loaded. How can I get my existing event listeners to trigger for events on these new elements?
+**A:** See [this article](https://davidwalsh.name/event-delegate) on event listening for DOM nodes added after the page has loaded, eg. jQuery dropdown plugins 
