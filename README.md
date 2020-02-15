@@ -29,7 +29,7 @@
 * [Rails UJS](https://github.com/rails/jquery-ujs) is what picks up on the `remote: true` forms or links, and adds the header to accept a response in JavaScript, instead of the regular HTML. If Rails UJS is missing, this functionality will not be implemented.
 
 ### Q: Webpack is serving an older version of my JavaScript, even when I delete my browser cache.
-**A:** Run `webpack` to have [Webpack](https://webpack.js.org/) rebuild its JavaScript pack for your application. See [here](https://github.com/rails/webpacker#development) for more information on developing with Webpack in Rails.
+**A:** Run `ruby bin/webpack` to have [Webpack](https://webpack.js.org/) rebuild its JavaScript pack for your application. See [here](https://github.com/rails/webpacker#development) for more information on developing with Webpack in Rails.
 
 ### Q: In JavaScript, calling `submit()` on an 'Ajax' form submits it as a regular HTTP request, instead of an Ajax call
 **A:** Calling `submit()` bypasses [Rails UJS](https://github.com/rails/jquery-ujs), which otherwise intercepts form submits and turns them into Ajax requests. Instead of calling `submit()`, do one of the following:
@@ -45,7 +45,7 @@ Rails.fire(form, 'submit');
 ```
 * See more information [here](https://github.com/rails/rails/issues/29546#issuecomment-313981539).
 
-### Q: I have more than one MapBox map on my page. When I display a map that was previously hidden, it renders as a small square.
+### Q: I have more than one MapBox map on my page. When I display a map that was previously hidden, it renders as a small square. How do I fix this?
 **A:** Once the map has been displayed (eg. when an event is triggered), be sure to call
 ```javascript
 map.resize()
