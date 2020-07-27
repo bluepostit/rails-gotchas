@@ -57,3 +57,6 @@ You will need a reference to the Mapbox map object, so that you can call `.resiz
 
 ### Q: I added new elements to the DOM after the page loaded. How can I get my existing event listeners to trigger for events on these new elements?
 **A:** See [this article](https://davidwalsh.name/event-delegate) on event listening for DOM nodes added after the page has loaded, eg. jQuery dropdown plugins 
+
+### Q: What is an easy way to implement a 'like' feature in a Rails app?
+**A:** The [`like_system` gem](https://github.com/pmviva/like_system) provides an easy solution. Seems to be updated pretty regularly, also.
