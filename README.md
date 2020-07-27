@@ -58,5 +58,8 @@ You will need a reference to the Mapbox map object, so that you can call `.resiz
 ### Q: I added new elements to the DOM after the page loaded. How can I get my existing event listeners to trigger for events on these new elements?
 **A:** See [this article](https://davidwalsh.name/event-delegate) on event listening for DOM nodes added after the page has loaded, eg. jQuery dropdown plugins 
 
+### Q: I want to display a calendar with events, perhaps spanning multiple days. What do you recommend I use?
+**A:** I recommend using [FullCalendar](https://fullcalendar.io/docs/initialize-es6). There are instructions for using it with Webpack. Remember to import each CSS file that you need, too! Otherwise it may not render properly on production.
+
 ### Q: What is an easy way to implement a 'like' feature in a Rails app?
 **A:** The [`like_system` gem](https://github.com/pmviva/like_system) provides an easy solution. Seems to be updated pretty regularly, also.
